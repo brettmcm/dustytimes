@@ -1,0 +1,23 @@
+{% do view.registerCssFile("/css/component/nav.css") %}
+{% block content %}
+
+<section id="logo">
+    <div class="content">
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Issue 01</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <img src="/images/dt-logo-stacked-black.png" class="main-logo">
+        <div class="menu-handle">
+            <div class="line top"></div>
+            <div class="line middle"></div>
+            <div class="line bottom"></div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

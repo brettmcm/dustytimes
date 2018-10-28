@@ -1,0 +1,162 @@
+@import "util/variables";
+@import "util/type";
+
+body {
+    background:$background;
+    color:$foreground;
+}
+
+a.button, button {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width:100%;
+    padding:1rem;
+    background: $foreground;
+    color: $background;
+    border-radius: 2px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    font-size:0.8rem;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    transition:background 0.3s;
+    &:hover {
+        background:lighten($foreground, 10);
+    }
+}
+
+
+
+.div {
+    position:relative;
+    display:block;
+    height:1px;
+    background:$foreground;
+    margin:2rem 0;
+    &.small {
+        width:50px;
+    }
+    &.full {
+        width:100%;
+    }
+}
+
+section {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .content {
+        position:relative;
+        display:flex;
+    }
+    &#logo {
+        .content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width:80vw;
+            .main-logo {
+                position:relative;
+                display:block;
+                width:20vw;
+                max-width:150px;
+                margin-top:2rem;
+                margin-bottom:4rem;
+                fill:$foreground;
+                z-index:5;
+            }
+            .menu {
+                position:fixed;
+                display:flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                top:0;
+                left:100vw;
+                width:100vw;
+                min-height:100vh;
+                background:$background;
+                box-sizing: border-box;
+                padding-top:calc(5rem + 10vw);
+                z-index:4;
+                ul, li {
+                    list-style: none;
+                }
+                ul {
+                    width:80vw;
+                    border-top:1px solid rgba($foreground, 0.1);
+                    padding-top:1rem;
+                }
+                li {
+                    font-size:1.1rem;
+                    line-height:3rem;
+                    font-weight:bold;
+                    border-bottom:1px solid rgba($foreground, 0.05);
+                }
+                @media only screen and (max-width: 600px) {
+                    transition:left 0.3s;
+                    &.open {
+                        left:0;
+                    }
+                }
+            }
+            .menu-handle {
+                position:relative;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: stretch;
+                width:10vw;
+                height:10vw;
+                margin-top:2rem;
+                margin-bottom:4rem;
+                z-index:5;
+                .line {
+                    width:100%;
+                    height:3px;
+                    background:$foreground;
+                    border-radius:2px;
+                    transition:all 0.1s;
+                    transform-origin: 50% 50%;
+                }
+                &.open {
+                    .line.top {
+                        transform:rotate(45deg) translate(2.25vw, 2.25vw);
+                    }
+                    .line.bottom {
+                        transform:rotate(-45deg) translate(2.25vw, -2.25vw);
+                    }
+                    .line.middle {
+                        transform:scaleX(0);
+                    }
+                }
+            }
+            @media only screen and (min-width: 600px) {
+                flex-direction: column;
+                align-items: center;
+                border-bottom:1px solid rgba($foreground, 0.1);
+                margin-bottom:4rem;
+                .menu-handle {
+                    display:none;
+                }
+            }
+        }
+    }
+    &#footer {
+        .content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            width:80vw;
+            margin:2rem 0;
+            padding-top:2rem;
+            border-top:1px solid rgba($foreground, 0.25);
+        }
+    }
+}

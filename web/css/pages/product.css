@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'EksellMedium';
+  src: url("/font/eksell/EksellDisplayWeb-Medium.eot");
+  src: url("/font/eksell/EksellDisplayWeb-Medium.eot?#iefix") format("embedded-opentype"), url("/font/eksell/EksellDisplayWeb-Medium.woff") format("woff"), url("/font/eksell/EksellDisplayWeb-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: Arial, sans-serif; }
+
+h1 {
+  font-family: 'EksellMedium', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem; }
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem; }
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem; }
+
+h5 {
+  font-weight: bold; }
+
+.color-primary {
+  color: #d30; }
+
+p {
+  font-family: Arial, sans-serif;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem; }
+  p.caption {
+    font-size: 0.7rem;
+    color: #242424; }
+
+ul {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 2rem; }
+  ul li {
+    display: list-item;
+    list-style-type: disc; }
+
+section#product .content {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80vw; }
+  section#product .content .product-images {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 90vw;
+    margin-left: -10vw;
+    padding-left: 10vw;
+    padding-bottom: 10px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; }
+    section#product .content .product-images img {
+      position: relative;
+      display: block;
+      height: 60vw;
+      margin-right: 1rem; }
+      section#product .content .product-images img:last-child {
+        padding-right: 10vw; }
+        @media only screen and (min-width: 600px) {
+          section#product .content .product-images img:last-child {
+            padding-right: 0; } }
+  section#product .content .product-buybox {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem; }
+    section#product .content .product-buybox .content-breakdown {
+      position: relative;
+      margin-top: 3rem; }
+      section#product .content .product-buybox .content-breakdown h4 {
+        margin-bottom: 2rem; }
+      section#product .content .product-buybox .content-breakdown .feature {
+        position: relative;
+        box-sizing: border-box;
+        border-left: 2px solid gainsboro;
+        padding: 0.25rem 1rem;
+        margin-bottom: 2rem; }
+        section#product .content .product-buybox .content-breakdown .feature .caption {
+          margin-bottom: 0.2rem; }
+        section#product .content .product-buybox .content-breakdown .feature .summary {
+          margin-bottom: 0; }
+  @media only screen and (min-width: 600px) {
+    section#product .content {
+      flex-direction: row; }
+      section#product .content .product-images {
+        flex-direction: column;
+        width: 60%;
+        margin-bottom: 0;
+        margin-left: 0;
+        padding-left: 0; }
+        section#product .content .product-images img {
+          width: 100%;
+          height: auto;
+          margin-right: 0;
+          margin-bottom: 1rem; }
+      section#product .content .product-buybox {
+        width: 35%; } }
+
+/*# sourceMappingURL=product.css.map */

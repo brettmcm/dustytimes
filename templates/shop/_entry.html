@@ -1,0 +1,208 @@
+{# Load CSS #}
+{% do view.registerCssFile("/css/pages/product.css") %}
+{% do view.registerCssFile("https://unpkg.com/flickity@2/dist/flickity.min.css") %}
+
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<section id="product">
+    <div class="content">
+        {% set product = craft.shopify.getProductById({ id: entry.shopifyProduct, fields: 'title,variants,images,body_html' }) %}
+        <div class="product-images">
+            {% for image in product.images %}
+                <img src="{{image.src}}">
+            {% endfor %}
+        </div>
+        <div class="product-buybox">
+            <h4>{{entry.moniker}}</h4>
+            <h1>{{entry.title}}</h1>
+            <h2>${{product.variants[0].price|split('.')[0]}}</h2>
+            <p>{{product.body_html|raw}}</p>
+            {% if entry.announcement is defined and entry.announcement is not empty %}
+                <h4 class="color-primary">{{entry.announcement}}</h4>
+            {% endif %}
+
+            <div id='product-component-8e2425f1a8b'></div>
+
+            {% if entry.contents is defined and entry.contents is not empty %}
+                <div class="content-breakdown">
+                    <h4>Featured Content</h4>
+                    {% for feature in entry.contents %}
+                        <div class="feature">
+                            <h5>{{feature.headline}}</h5>
+                            <p class="caption">{{feature.byline}}</p>
+                            <p class="summary">{{feature.summary}}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<script type="text/javascript">
+        /*<![CDATA[*/
+
+        (function () {
+          var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+          if (window.ShopifyBuy) {
+            if (window.ShopifyBuy.UI) {
+              ShopifyBuyInit();
+            } else {
+              loadScript();
+            }
+          } else {
+            loadScript();
+          }
+
+          function loadScript() {
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = scriptURL;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+            script.onload = ShopifyBuyInit;
+          }
+
+          function ShopifyBuyInit() {
+            var client = ShopifyBuy.buildClient({
+              domain: 'dusty-times-com.myshopify.com',
+              storefrontAccessToken: '023baf837c258b3eb6064137226fc4a3',
+            });
+
+            ShopifyBuy.UI.onReady(client).then(function (ui) {
+              ui.createComponent('product', {
+                id: [1784173035633],
+                node: document.getElementById('product-component-8e2425f1a8b'),
+                moneyFormat: '%24%7B%7Bamount%7D%7D',
+                options: {
+      "product": {
+        "buttonDestination": "checkout",
+        "variantId": "all",
+        "width": "100%",
+        "contents": {
+          "img": false,
+          "imgWithCarousel": false,
+          "title": false,
+          "variantTitle": false,
+          "price": false,
+          "description": false,
+          "buttonWithQuantity": false,
+          "quantity": false
+        },
+        "text": {
+          "button": "BUY NOW"
+        },
+        "styles": {
+          "product": {
+            "text-align": "left",
+            "width": "100%",
+            "@media (min-width: 601px)": {
+              "width": "100%",
+              "margin-left": "0",
+              "margin-bottom": "0"
+            }
+          },
+          "button": {
+            "width": "100%",
+            "background-color": "#111111",
+            ":hover": {
+              "background-color": "#1d1d1d"
+            },
+            "border-radius": "2px",
+            ":focus": {
+              "background-color": "#1d1d1d"
+            }
+          }
+        }
+      },
+      "cart": {
+        "contents": {
+          "button": true
+        },
+        "styles": {
+          "button": {
+            "background-color": "#111111",
+            ":hover": {
+              "background-color": "#1d1d1d"
+            },
+            "border-radius": "2px",
+            ":focus": {
+              "background-color": "#1d1d1d"
+            }
+          },
+          "footer": {
+            "background-color": "#ffffff"
+          }
+        }
+      },
+      "modalProduct": {
+        "contents": {
+          "img": false,
+          "imgWithCarousel": true,
+          "variantTitle": false,
+          "buttonWithQuantity": true,
+          "button": false,
+          "quantity": false
+        },
+        "styles": {
+          "product": {
+            "@media (min-width: 601px)": {
+              "max-width": "100%",
+              "margin-left": "0px",
+              "margin-bottom": "0px"
+            }
+          },
+          "button": {
+            "background-color": "#111111",
+            ":hover": {
+              "background-color": "#1d1d1d"
+            },
+            "border-radius": "2px",
+            ":focus": {
+              "background-color": "#1d1d1d"
+            }
+          }
+        }
+      },
+      "toggle": {
+        "styles": {
+          "toggle": {
+            "background-color": "#111111",
+            ":hover": {
+              "background-color": "#1d1d1d"
+            },
+            ":focus": {
+              "background-color": "#1d1d1d"
+            }
+          }
+        }
+      },
+      "productSet": {
+        "styles": {
+          "products": {
+            "@media (min-width: 601px)": {
+              "margin-left": "-20px"
+            }
+          }
+        }
+      }
+    }
+              });
+            });
+          }
+        })();
+        /*]]>*/
+</script>
+
+
+{% endblock %}
+
+{% do view.registerJsFile("/js/app.js") %}

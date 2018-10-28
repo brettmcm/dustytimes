@@ -1,0 +1,81 @@
+@import "util/variables";
+@import "util/type";
+
+section {
+    &#product {
+        .content {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width:80vw;
+            .product-images {
+                position:relative;
+                display:flex;
+                flex-direction: row;
+                flex-wrap:nowrap;
+                width: 90vw;
+                margin-left: -10vw;
+                padding-left: 10vw;
+                padding-bottom:10px;
+                overflow-x:scroll;
+                -webkit-overflow-scrolling: touch;
+                img {
+                    position:relative;
+                    display:block;
+                    height:60vw;
+                    margin-right:1rem;
+                    &:last-child {
+                        padding-right:10vw;
+                        @media only screen and (min-width: 600px) {
+                            padding-right:0;
+                        }
+                    }
+                }
+            }
+            .product-buybox {
+                position:relative;
+                width:100%;
+                margin-top:1rem;
+                .content-breakdown {
+                    position:relative;
+                    margin-top:3rem;
+                    h4 {
+                        margin-bottom:2rem;
+                    }
+                    .feature {
+                        position:relative;
+                        box-sizing: border-box;
+                        border-left:2px solid darken($background, 7);
+                        padding:0.25rem 1rem;
+                        margin-bottom:2rem;
+                        .caption {
+                            margin-bottom:0.2rem;
+                        }
+                        .summary {
+                            margin-bottom:0;
+                        }
+                    }
+                }
+            }
+            @media only screen and (min-width: 600px) {
+                flex-direction: row;
+                .product-images {
+                    flex-direction: column;
+                    width:60%;
+                    margin-bottom:0;
+                    margin-left: 0;
+                    padding-left: 0;
+                    img {
+                        width:100%;
+                        height:auto;
+                        margin-right:0;
+                        margin-bottom:1rem;
+                    }
+                }
+                .product-buybox {
+                    width:35%;
+                }
+            }
+        }
+    }
+}

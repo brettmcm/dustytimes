@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>{{siteName}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    {% do view.registerCssFile("/css/reset.css") %}
+    {% do view.registerCssFile("/css/style.css") %}
+
+
+
+
+</head>
+<body>
+
+    {% include "components/nav" with {"section": siteName} %}
+
+    {% block content %}
+    {% endblock %}
+
+    <section id="footer">
+        <div class="content">
+            <p>Insta</p>
+            <p>©2018 Dusty Times</p>
+        </div>
+    </section>
+
+
+</body>
+</html>
