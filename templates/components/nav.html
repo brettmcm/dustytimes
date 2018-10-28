@@ -1,22 +1,20 @@
-{% do view.registerCssFile("/css/component/nav.css") %}
+{% do view.registerCssFile("/css/components/nav.css") %}
 {% block content %}
 
-<section id="logo">
+<section id="header">
     <div class="content">
-        <div class="menu">
-            <ul>
-                <li>Home</li>
-                <li>Issue 01</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </div>
-        <img src="/images/dt-logo-stacked-black.png" class="main-logo">
+        <a href="/"><img src="/images/dt-logo-black.svg" class="main-logo"></a>
         <div class="menu-handle">
             <div class="line top"></div>
             <div class="line middle"></div>
             <div class="line bottom"></div>
         </div>
+        <ul class="menu">
+            <a href="/"><li>Home</li></a>
+            <a href="/shop/issue-01"><li>Issue 01</li></a>
+            <a href="/about"><li>About</li></a>
+            <a href="/contact"><li>Contact</li></a>
+        </ul>
     </div>
 </section>
 

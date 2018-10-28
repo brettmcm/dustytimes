@@ -77,4 +77,10 @@ ul {
     display: list-item;
     list-style-type: disc; }
 
-/*# sourceMappingURL=home.css.map */
+section#about .content {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw; }
+
+/*# sourceMappingURL=about.css.map */

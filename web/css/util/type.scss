@@ -5,10 +5,22 @@ body {
     font-family:Arial, sans-serif;
 }
 
+a {
+    color:$primary;
+}
+
+.center {
+    text-align:center;
+}
+
 h1 {
     font-family: 'EksellMedium', serif;
     font-size:2rem;
     margin-bottom:2rem;
+    &.display {
+        font-family: 'EksellLarge', serif;
+        font-size:4rem;
+    }
 }
 
 h2 {
@@ -27,6 +39,7 @@ h4 {
 
 h5 {
     font-weight:bold;
+    margin-bottom:0.5rem;
 }
 
 .color-primary {
@@ -42,6 +55,18 @@ p {
     &.caption {
         font-size:0.7rem;
         color:lighten($foreground, 0.75);
+    }
+}
+
+.justified-block {
+    width:100%;
+    max-width:600px;
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+        &.center {
+            text-align:center;
+        }
     }
 }
 

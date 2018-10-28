@@ -1,0 +1,23 @@
+{# Load CSS #}
+{% do view.registerCssFile("/css/pages/about.css") %}
+
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<section id="about">
+    <div class="content">
+
+        <h1 class="display center">{{entry.title}}</h1>
+        <div class="div small"></div>
+        <div class="justified-block">{{entry.body}}</div>
+        <div class="div small"></div>
+        <div class="justified-block"><p class="center caption">{{entry.subhead}}</p></div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+{% do view.registerJsFile("/js/app.js") %}

@@ -1,0 +1,13 @@
+@import "util/variables";
+@import "util/type";
+
+section {
+    &#about {
+        .content {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width:90vw;
+        }
+    }
+}

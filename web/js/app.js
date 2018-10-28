@@ -6,6 +6,7 @@ $(function(){
     $( hamburger ).click(function() {
       $(this).toggleClass("open");
       $(menu).toggleClass("open");
+      $("body").toggleClass("no-scroll");
     });
 
 

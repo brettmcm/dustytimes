@@ -1,0 +1,27 @@
+@import "util/variables";
+@import "util/type";
+
+section {
+    &#about {
+        .content {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width:90vw;
+            max-width:1000px;
+            .heading, .body {
+                width:100%;
+            }
+            @media only screen and (min-width: 600px) {
+                flex-direction: row;
+                .heading { width:40%; }
+                .body { width:50%; }
+            }
+            @media only screen and (min-width: 700px) {
+                flex-direction: row;
+                .heading { width:40%; }
+                .body { width:60%; }
+            }
+        }
+    }
+}

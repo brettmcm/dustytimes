@@ -1,0 +1,39 @@
+{# Load CSS #}
+{% do view.registerCssFile("/css/pages/contact.css") %}
+
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<section id="about">
+    <div class="content">
+
+        <div class="heading">
+            <h1 class="display">Contact</h1>
+            <div class="div small"></div>
+            <h5>Dusty Times HQ</h5>
+            <p>1200 Cornet Street<br>Costa Mesa, CA 92627</p>
+            <br>
+            <h5>Advertising & Partnerships</h5>
+            <p><a href="mailto:info@dustytimes.com">info@dustytimes.com</a></p>
+            <br>
+            <h5>Submissions</h5>
+            <p><a href="mailto:submissions@dustytimes.com">submissions@dustytimes.com</a></p>
+        </div>
+        <div class="body">
+            <p class="justified-block">Plain and simple, we love playing in the dust. No different than any other romance. We have no choice once bitten. It’s the way you feel the first time you make a tire spin, the first time you conquer a hill, the first time you wear a helmet. It’s a ritual, passed from generation to generation of hopelessly obsessed. You know you love it.</p>
+            <p class="justified-block">We represent this obsession. We place it on a pedestal. We aren’t the first, but we accept the responsibility with all due reverence to what once was. Dusty Times is curated content to feed this fascination, even when we can’t actually get dirty. We want to be a window to the daydreams of our kind. The places we want to go. The stuff we want to apply throttle. Maybe a story of adventure we’ve never heard before. For like-minded dirt, gear, motor, outdoor, and adventure individuals, with an eye for the well-crafted.</p>
+            <p class="justified-block">We intend to energize this institution and what it represents.</p>
+            <p class="justified-block">An experience we are in love with.</p>
+            <p class="justified-block">Good clean fun.</p>
+            <div class="div small"></div>
+            <p class="justified-block center caption">Dusty Times is produced in partnership with Custom Wheel House</p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+{% do view.registerJsFile("/js/app.js") %}

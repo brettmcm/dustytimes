@@ -77,4 +77,27 @@ ul {
     display: list-item;
     list-style-type: disc; }
 
-/*# sourceMappingURL=home.css.map */
+section#about .content {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90vw;
+  max-width: 1000px; }
+  section#about .content .heading, section#about .content .body {
+    width: 100%; }
+  @media only screen and (min-width: 600px) {
+    section#about .content {
+      flex-direction: row; }
+      section#about .content .heading {
+        width: 40%; }
+      section#about .content .body {
+        width: 50%; } }
+  @media only screen and (min-width: 700px) {
+    section#about .content {
+      flex-direction: row; }
+      section#about .content .heading {
+        width: 40%; }
+      section#about .content .body {
+        width: 60%; } }
+
+/*# sourceMappingURL=contact.css.map */

@@ -1,6 +1,5 @@
 {# Load CSS #}
 {% do view.registerCssFile("/css/pages/product.css") %}
-{% do view.registerCssFile("https://unpkg.com/flickity@2/dist/flickity.min.css") %}
 
 
 {% extends "_layout" %}
@@ -17,7 +16,7 @@
         </div>
         <div class="product-buybox">
             <h4>{{entry.moniker}}</h4>
-            <h1>{{entry.title}}</h1>
+            <h1 class="display">{{entry.title}}</h1>
             <h2>${{product.variants[0].price|split('.')[0]}}</h2>
             <p>{{product.body_html|raw}}</p>
             {% if entry.announcement is defined and entry.announcement is not empty %}
