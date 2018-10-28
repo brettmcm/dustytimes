@@ -30,6 +30,16 @@ body {
     &:hover {
         background:lighten($foreground, 10);
     }
+    &.inline {
+        width:auto;
+    }
+    &.invert {
+        background:$background;
+        color:$foreground;
+        &:hover {
+            background:darken($background, 10);
+        }
+    }
 }
 
 

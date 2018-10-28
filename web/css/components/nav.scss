@@ -27,6 +27,7 @@ section {
                 width:40vw;
                 max-width:150px;
                 z-index:5;
+                fill:$foreground;
             }
             .menu {
                 position:fixed;
@@ -122,6 +123,41 @@ section {
                         li {
                             width:auto;
                             border-bottom:none;
+                        }
+                    }
+                }
+            }
+        }
+        &.invert {
+            margin-bottom:0;
+            @media only screen and (min-width: 600px) {
+                position:absolute;
+                left:5vw;
+                color:$background;
+                .content {
+                    .main-logo {
+                        fill:$background;
+                    }
+                    .menu {
+                        background:none;
+                        a {
+                            color:$background;
+                        }
+                        &.open {
+                            a {
+                                color:$foreground;
+                            }
+                        }
+                    }
+                }
+                .menu-handle {
+                    .line {
+                        background:$background;
+                        transition:all 0.3s;
+                    }
+                    &.open {
+                        .line {
+                            background:$foreground;
                         }
                     }
                 }

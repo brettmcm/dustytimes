@@ -25,7 +25,10 @@ h1 {
   margin-bottom: 2rem; }
   h1.display {
     font-family: 'EksellLarge', serif;
-    font-size: 4rem; }
+    font-size: 3rem; }
+    @media only screen and (min-width: 600px) {
+      h1.display {
+        font-size: 4rem; } }
 
 h2 {
   font-family: 'Oswald', sans-serif;
@@ -101,7 +104,8 @@ section {
         display: block;
         width: 40vw;
         max-width: 150px;
-        z-index: 5; }
+        z-index: 5;
+        fill: #222; }
       section#header .content .menu {
         position: fixed;
         display: flex;
@@ -181,6 +185,26 @@ section {
             section#header .content .menu a li {
               width: auto;
               border-bottom: none; } }
+    section#header.invert {
+      margin-bottom: 0; }
+      @media only screen and (min-width: 600px) {
+        section#header.invert {
+          position: absolute;
+          left: 5vw;
+          color: #eee; }
+          section#header.invert .content .main-logo {
+            fill: #eee; }
+          section#header.invert .content .menu {
+            background: none; }
+            section#header.invert .content .menu a {
+              color: #eee; }
+            section#header.invert .content .menu.open a {
+              color: #222; }
+          section#header.invert .menu-handle .line {
+            background: #eee;
+            transition: all 0.3s; }
+          section#header.invert .menu-handle.open .line {
+            background: #222; } }
     section#header.open {
       position: fixed; }
 

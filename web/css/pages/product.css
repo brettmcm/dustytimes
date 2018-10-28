@@ -25,7 +25,10 @@ h1 {
   margin-bottom: 2rem; }
   h1.display {
     font-family: 'EksellLarge', serif;
-    font-size: 4rem; }
+    font-size: 3rem; }
+    @media only screen and (min-width: 600px) {
+      h1.display {
+        font-size: 4rem; } }
 
 h2 {
   font-family: 'Oswald', sans-serif;
