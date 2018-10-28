@@ -3,7 +3,8 @@
     "craftcms/cms": "^3.0.0",
     "vlucas/phpdotenv": "^2.4.0",
     "nmaier95/shopify-product-fetcher": "1.0.3",
-    "craftcms/redactor": "2.1.6"
+    "craftcms/redactor": "2.1.6",
+    "craftcms/contact-form": "2.2.2"
   },
   "autoload": {
     "psr-4": {

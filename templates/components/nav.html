@@ -1,7 +1,7 @@
 {% do view.registerCssFile("/css/components/nav.css") %}
 {% block content %}
 
-<section id="header">
+<section id="header"{% if invert %} class="invert"{% endif %}>
     <div class="content">
         <a href="/"><img src="/images/dt-logo-black.svg" class="main-logo"></a>
         <div class="menu-handle">

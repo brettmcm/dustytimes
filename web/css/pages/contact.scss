@@ -2,7 +2,7 @@
 @import "util/type";
 
 section {
-    &#about {
+    &#contact {
         .content {
             flex-direction: column;
             justify-content: space-between;
@@ -12,6 +12,107 @@ section {
             .heading, .body {
                 width:100%;
             }
+
+
+
+            .message {
+                list-style: none;
+                font-size:0.8rem;
+                margin-bottom:2rem;
+                &.error {
+                    color:$error;
+                }
+                &.notice {
+                    font-weight:bold;
+                }
+            }
+
+
+            #contact-form {
+              display:flex;
+              flex-direction:row;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: flex-start;
+              box-sizing: border-box;
+              width:100%;
+
+              .input-name, .input-email, .input-subject, .input-message {
+                  width:100%;
+                  margin-bottom:1rem;
+                  p {
+                      margin-bottom:0.5rem;
+                  }
+                  .errors {
+                      margin-bottom:0;
+                      li {
+                          list-style: none;
+                          padding:5px 10px;
+                          font-size:0.8rem;
+                          background: darken($background, 4);
+                          color:$error;
+                      }
+                  }
+              }
+
+              @media only screen and (min-width: 900px) {
+                  .input-name, .input-email {
+                      width:calc(50% - 1rem);
+                  }
+              }
+
+              .form-input, input[type=text] {
+                -webkit-appearance: none;
+                display:block;
+                background:white;
+                box-sizing: border-box;
+                width:100%;
+                padding:1rem;
+                border:1px solid darken($background, 3);
+                outline:none;
+                font-size:0.9rem;
+                font-family: arial, sans-serif;
+                letter-spacing:1px;
+                color:$foreground;
+                transition:border 0.3s;
+                &:focus {
+                  border:1px solid darken($background, 12);
+                }
+                &:-webkit-autofill {
+                    background:$background;
+                }
+              }
+              .form-message {
+                -webkit-appearance: none;
+                display:block;
+                background:white;
+                box-sizing: border-box;
+                width:100%;
+                height:250px;
+                padding:1rem;
+                border:1px solid darken($background, 3);
+                outline:none;
+                font-size:0.9rem;
+                font-family: arial, sans-serif;
+                letter-spacing:1px;
+                color:$foreground;
+                transition:border 0.3s;
+                resize:none;
+                overflow:auto;
+                &:focus {
+                  border:1px solid darken($background, 12);
+                }
+              }
+
+            }
+
+
+
+
+
+
+
+
             @media only screen and (min-width: 600px) {
                 flex-direction: row;
                 .heading { width:40%; }

@@ -21,12 +21,12 @@
 </head>
 <body>
 
-    {% include "components/nav" with {"section": siteName, "invert": false } %}
+    {% include "components/nav" with {"section": siteName, "invert": true } %}
 
     {% block content %}
     {% endblock %}
 
-    <section id="footer">
+    <section id="footer" class="home invert">
         <div class="content">
             <div class="social">
                 <a href="//www.instagram.com/dustytimesmag" target="_new"><img src="/images/logo-instagram.svg"></a>

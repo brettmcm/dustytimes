@@ -14,7 +14,7 @@ body {
   font-family: Arial, sans-serif; }
 
 a {
-  color: #d30; }
+  color: #f30; }
 
 .center {
   text-align: center; }
@@ -44,7 +44,7 @@ h5 {
   margin-bottom: 0.5rem; }
 
 .color-primary {
-  color: #d30; }
+  color: #f30; }
 
 p {
   font-family: Arial, sans-serif;
@@ -77,27 +77,96 @@ ul {
     display: list-item;
     list-style-type: disc; }
 
-section#about .content {
+section#contact .content {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   width: 90vw;
   max-width: 1000px; }
-  section#about .content .heading, section#about .content .body {
+  section#contact .content .heading, section#contact .content .body {
     width: 100%; }
+  section#contact .content .message {
+    list-style: none;
+    font-size: 0.8rem;
+    margin-bottom: 2rem; }
+    section#contact .content .message.error {
+      color: #f30; }
+    section#contact .content .message.notice {
+      font-weight: bold; }
+  section#contact .content #contact-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 100%; }
+    section#contact .content #contact-form .input-name, section#contact .content #contact-form .input-email, section#contact .content #contact-form .input-subject, section#contact .content #contact-form .input-message {
+      width: 100%;
+      margin-bottom: 1rem; }
+      section#contact .content #contact-form .input-name p, section#contact .content #contact-form .input-email p, section#contact .content #contact-form .input-subject p, section#contact .content #contact-form .input-message p {
+        margin-bottom: 0.5rem; }
+      section#contact .content #contact-form .input-name .errors, section#contact .content #contact-form .input-email .errors, section#contact .content #contact-form .input-subject .errors, section#contact .content #contact-form .input-message .errors {
+        margin-bottom: 0; }
+        section#contact .content #contact-form .input-name .errors li, section#contact .content #contact-form .input-email .errors li, section#contact .content #contact-form .input-subject .errors li, section#contact .content #contact-form .input-message .errors li {
+          list-style: none;
+          padding: 5px 10px;
+          font-size: 0.8rem;
+          background: #e4e4e4;
+          color: #f30; }
+    @media only screen and (min-width: 900px) {
+      section#contact .content #contact-form .input-name, section#contact .content #contact-form .input-email {
+        width: calc(50% - 1rem); } }
+    section#contact .content #contact-form .form-input, section#contact .content #contact-form input[type=text] {
+      -webkit-appearance: none;
+      display: block;
+      background: white;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #e6e6e6;
+      outline: none;
+      font-size: 0.9rem;
+      font-family: arial, sans-serif;
+      letter-spacing: 1px;
+      color: #222;
+      transition: border 0.3s; }
+      section#contact .content #contact-form .form-input:focus, section#contact .content #contact-form input[type=text]:focus {
+        border: 1px solid #cfcfcf; }
+      section#contact .content #contact-form .form-input:-webkit-autofill, section#contact .content #contact-form input[type=text]:-webkit-autofill {
+        background: #eee; }
+    section#contact .content #contact-form .form-message {
+      -webkit-appearance: none;
+      display: block;
+      background: white;
+      box-sizing: border-box;
+      width: 100%;
+      height: 250px;
+      padding: 1rem;
+      border: 1px solid #e6e6e6;
+      outline: none;
+      font-size: 0.9rem;
+      font-family: arial, sans-serif;
+      letter-spacing: 1px;
+      color: #222;
+      transition: border 0.3s;
+      resize: none;
+      overflow: auto; }
+      section#contact .content #contact-form .form-message:focus {
+        border: 1px solid #cfcfcf; }
   @media only screen and (min-width: 600px) {
-    section#about .content {
+    section#contact .content {
       flex-direction: row; }
-      section#about .content .heading {
+      section#contact .content .heading {
         width: 40%; }
-      section#about .content .body {
+      section#contact .content .body {
         width: 50%; } }
   @media only screen and (min-width: 700px) {
-    section#about .content {
+    section#contact .content {
       flex-direction: row; }
-      section#about .content .heading {
+      section#contact .content .heading {
         width: 40%; }
-      section#about .content .body {
+      section#contact .content .body {
         width: 60%; } }
 
 /*# sourceMappingURL=contact.css.map */

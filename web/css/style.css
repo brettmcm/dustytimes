@@ -14,7 +14,7 @@ body {
   font-family: Arial, sans-serif; }
 
 a {
-  color: #d30; }
+  color: #f30; }
 
 .center {
   text-align: center; }
@@ -44,7 +44,7 @@ h5 {
   margin-bottom: 0.5rem; }
 
 .color-primary {
-  color: #d30; }
+  color: #f30; }
 
 p {
   font-family: Arial, sans-serif;
@@ -83,7 +83,7 @@ body {
   body.no-scroll {
     overflow: hidden; }
 
-a.button, button {
+.button, button {
   position: relative;
   display: flex;
   justify-content: center;
@@ -101,7 +101,7 @@ a.button, button {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: background 0.3s; }
-  a.button:hover, button:hover {
+  .button:hover, button:hover {
     background: #3c3c3c; }
 
 .div {
@@ -129,8 +129,15 @@ section {
     justify-content: space-between;
     align-items: flex-start;
     width: 90vw;
-    margin: 2rem 0;
+    margin: 8rem 0 2rem 0;
     padding-top: 2rem;
     border-top: 1px solid rgba(34, 34, 34, 0.25); }
+    section#footer .content .social a {
+      margin-right: 1rem; }
+      section#footer .content .social a img {
+        opacity: 0.8;
+        transition: opacity 0.3s; }
+      section#footer .content .social a:hover img {
+        opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

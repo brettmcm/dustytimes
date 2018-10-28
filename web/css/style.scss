@@ -9,7 +9,7 @@ body {
     }
 }
 
-a.button, button {
+.button, button {
     position: relative;
     display:flex;
     justify-content: center;
@@ -64,9 +64,23 @@ section {
             justify-content: space-between;
             align-items: flex-start;
             width:90vw;
-            margin:2rem 0;
+            margin:8rem 0 2rem 0;
             padding-top:2rem;
             border-top:1px solid rgba($foreground, 0.25);
+            .social {
+                a {
+                    margin-right:1rem;
+                    img {
+                        opacity:0.8;
+                        transition:opacity 0.3s;
+                    }
+                    &:hover {
+                        img {
+                            opacity:1;
+                        }
+                    }
+                }
+            }
         }
     }
 }
