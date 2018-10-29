@@ -186,7 +186,10 @@ section {
               width: auto;
               border-bottom: none; } }
     section#header.invert {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      background: none;
+      border-bottom: 1px solid rgba(238, 238, 238, 0.2);
+      z-index: 10; }
       @media only screen and (min-width: 600px) {
         section#header.invert {
           position: absolute;

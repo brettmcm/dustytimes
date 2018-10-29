@@ -11,7 +11,52 @@
         <h4>Issue 01</h4>
         <h1 class="display">Energizing An Institution</h1>
         <p>The inagural issue of the new Dusty Times magazine. With off-road content from contributors like Sal Fish, Rory Ward, Darren Skilton, and Troy Lee</p>
-        <a href="/shop/issue-01" class="button inline invert">Buy Now</a>
+        <a href="/shop/issue-01" class="button inline invert">Learn More</a>
+    </div>
+</section>
+
+<section id="ig-feed">
+    <div class="content">
+
+        <h1 class="display">The Feed</h1>
+        <div class="div small"></div>
+        <p>The latest highlight reel from <a href="//www.instagram.com/dustytimesmag">Instagram</a>.</p>
+
+        <div class="ig-grid">
+
+
+            {% set igParams = {
+                url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' ~ apiKeys.igAuthKey,
+                type: 'json',
+                element: 'data',
+                cache: 60
+            } %}
+            {% set igFeed = craft.feedme.feed(igParams) %}
+
+
+            {% for i, item in igFeed %}
+                {% if i < 8 %}
+
+                    {% set imgUrl = item.images.standard_resolution.url %}
+                    {% set postLink = item.link %}
+
+                    <div class="grid-item">
+                        <a href="{{postLink}}" target="_new" class="naked">
+                        {% if imgUrl is defined and imgUrl is not empty %}
+                            <div class="image">
+                                <img src="{{imgUrl}}">
+                            </div>
+                        {% endif %}
+                        </a>
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+
+        </div>
+
+        <a href="//www.instagram.com/dustytimesmag" class="button inline">Follow</a>
+
     </div>
 </section>
 

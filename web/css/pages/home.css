@@ -83,7 +83,7 @@ ul {
 section.hero-banner {
   position: relative;
   width: 100vw;
-  min-height: 80vh;
+  min-height: 85vh;
   background: #eee; }
   section.hero-banner.issue01 {
     background: url("/images/issue01-hero.jpg") center center;
@@ -118,5 +118,50 @@ section.hero-banner {
       section.hero-banner .content {
         align-items: center;
         margin-top: calc(26px + 2rem); } }
+section#ig-feed {
+  margin-top: 4rem; }
+  section#ig-feed .content {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    max-width: 1400px; }
+    section#ig-feed .content .ig-grid {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-flow: wrap;
+      margin: 1rem 0; }
+      section#ig-feed .content .ig-grid .grid-item {
+        margin-bottom: 1rem;
+        font-weight: 700;
+        width: 100%; }
+        @media screen and (min-width: 600px) {
+          section#ig-feed .content .ig-grid .grid-item {
+            width: calc(50% - 0.5rem); } }
+        @media screen and (min-width: 900px) {
+          section#ig-feed .content .ig-grid .grid-item {
+            width: calc(33.333% - 0.66rem); } }
+        @media screen and (min-width: 1200px) {
+          section#ig-feed .content .ig-grid .grid-item {
+            width: calc(25% - 0.75rem); } }
+        section#ig-feed .content .ig-grid .grid-item:hover .image {
+          filter: grayscale(0%); }
+        section#ig-feed .content .ig-grid .grid-item .image {
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+          filter: grayscale(20%);
+          transition: filter 0.2s; }
+          section#ig-feed .content .ig-grid .grid-item .image img, section#ig-feed .content .ig-grid .grid-item .image video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
 
 /*# sourceMappingURL=home.css.map */
