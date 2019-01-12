@@ -1,0 +1,63 @@
+{# Load CSS #}
+{% do view.registerCssFile("/css/pages/features.css") %}
+{% do view.registerCssFile("https://unpkg.com/flickity@2/dist/flickity.min.css") %}
+
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<section id="features" class="story">
+    <div class="content">
+
+        <img src="/assets/eastcape/eastcape-hero.jpg" class="hero-image">
+
+        <h1 class="display center">{{entry.title}}</h1>
+        <div class="div small"></div>
+        <div class="intro center">{{entry.body}}</div>
+
+        <div class="gallery">
+            <img src="/assets/eastcape/DSC00370.jpg" class="gallery-image count-2">
+            <img src="/assets/eastcape/DSC00827.jpg" class="gallery-image count-2">
+        </div>
+
+        <div class="body center">
+            <p>A stones throw from the bustling tourist mecca of Cabo San Lucas, where the cell service terminates nearly in unison with the end of paved roads, just north of the San Jose Del Cabo marina, begins an isolated stretch of beaches dotted with off-the-grid homes and salty surf campers.</p>
+            <p>While the area known as “The East Cape” includes everything north of San Jose del Cabo up to Punta Pescadero and east of highway 1, the route north on Camino Cabo Este, following the coast from San Jose to Los Barrilles is the best way to get dirty. We put our unsuspecting rental “SUV” to the test on 78 miles of sandy washboard road surface with the occasional traffic jam of local cattle, families of burros and even a chupacabra disguised as a fox. The southern beaches like shipwrecks are renown for their surf breaks, the northern waters are home to the Cabo Pulmo National Marine Reserve and world class scuba diving. Along the way are endless arroyos leading to hidden beaches just begging to be explored.</p>
+        </div>
+
+        <div class="gallery">
+            <img src="/assets/eastcape/DSC01594.jpg" class="gallery-image count-3">
+            <img src="/assets/eastcape/DSC01836.jpg" class="gallery-image count-3">
+            <img src="/assets/eastcape/DSC01847.jpg" class="gallery-image count-3">
+        </div>
+
+        <div class="div small"></div>
+
+        <div class="body center">
+            <p>Read our full feature on our trip through The East Cape in <a href="/shop/issue-01">Issue 01 - on sale now</a>.</p>
+        </div>
+
+        <div class="div small"></div>
+
+
+        <div class="downloads">
+            <div class="content">
+                <h2>Downloads</h2>
+                <ul>
+                    <a href="/assets/eastcape/dustytimes-eastcape.zip"><li>
+                        <svg version="1.1" viewBox="0 0 16 16" xml:space="preserve" width="16" height="16"><title>system update</title><g><path d="M15,15H1c-0.552,0-1-0.448-1-1V2c0-0.552,0.448-1,1-1h4v2H2v10h12V3h-3V1h4c0.552,0,1,0.448,1,1v12 C16,14.552,15.552,15,15,15z"></path> <polygon data-color="color-2" points="9,7 9,1 7,1 7,7 4,7 8,11 12,7 "></polygon></g></svg>
+                        East Cape Trip GPS Waypoints</li></a>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+{% endblock %}
+
+{% do view.registerJsFile("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js") %}
+{% do view.registerJsFile("/js/feature.js") %}
+{% do view.registerJsFile("/js/app.js") %}

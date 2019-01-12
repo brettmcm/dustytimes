@@ -1,0 +1,36 @@
+{# Load CSS #}
+{% do view.registerCssFile("/css/pages/features.css") %}
+
+
+{% extends "_layout" %}
+
+{% block content %}
+
+<section id="features">
+    <div class="content">
+
+        <h1 class="display center">{{entry.title}}</h1>
+        <div class="div small"></div>
+        <div class="justified-block">
+
+            <div class="feature-grid">
+                {% for feature in craft.entries({section: 'features'}).all() %}
+                    <a href="{{feature.url}}" class="feature-card count-{{loop.index}}">
+                        <img src="/assets/eastcape/eastcape-hero.jpg">
+                        <div class="copy">
+                            <h4>Issue 01</h4>
+                            <h1>{{feature.title}}</h1>
+                            <div class="button inline invert">Read More</div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+{% do view.registerJsFile("/js/app.js") %}

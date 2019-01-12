@@ -46,10 +46,10 @@ body {
 
 .div {
     position:relative;
-    display:block;
+    display:inline-block;
     height:1px;
     background:$foreground;
-    margin:2rem 0;
+    margin:2rem;
     &.small {
         width:50px;
     }

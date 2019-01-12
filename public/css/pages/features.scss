@@ -1,0 +1,126 @@
+@import "util/variables";
+@import "util/type";
+
+section {
+    &#features {
+        .content {
+            display:inline-block;
+            text-align:center;
+            width:90vw;
+            .feature-grid {
+                position:relative;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                .feature-card {
+                    position:relative;
+                    width: 100%;
+                    min-height:40vw;
+                    text-decoration: none;
+                    img {
+                        position:absolute;
+                        left:0;
+                        top:0px;
+                        width:100%;
+                        height:100%;
+                        object-fit: cover;
+                        z-index:-1;
+                    }
+                    .copy {
+                        position:relative;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        box-sizing: border-box;
+                        width:100%;
+                        min-height:40vw;
+                        z-index:2;
+                        color:white;
+                        background:rgba($foreground, 0.5);
+                        padding:10%;
+                    }
+                }
+                @media screen and (min-width:700px) {
+                    flex-direction: row;
+                    .feature-card {
+                        &.count-2 { width: calc(50% - 10px); }
+                    }
+                }
+            }
+        }
+        &.story {
+            .hero-image {
+                position:relative;
+                width:100%;
+                height:50vh;
+                object-fit: cover;
+                margin-bottom:3em;
+            }
+            .content {
+                .intro {
+                    margin:0 0 3em 0;
+                }
+                .body {
+                    margin:3em 0;
+                    text-align:left;
+                    p {
+                        margin-bottom:2em;
+                    }
+                }
+                .gallery {
+                    position:relative;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width:100%;
+                    .gallery-image {
+                        width:100%;
+                        height:auto;
+                        object-fit: cover;
+                        margin-bottom:20px;
+                    }
+                    @media screen and (min-width:700px) {
+                        flex-direction: row;
+                        .gallery-image {
+                            &.count-2 { width:calc(50% - 10px); }
+                            &.count-3 { width:calc(33.33% - 10px); }
+                        }
+                    }
+                }
+                .downloads {
+                    position:relative;
+                    box-sizing: border-box;
+                    width:100%;
+                    .content {
+                        width:100%;
+                        max-width:700px;
+                        text-align:left;
+                    }
+                    ul, li {
+                        list-style: none;
+                    }
+                    ul {
+                        a {
+                            text-decoration: none;
+                            transition: color 0.3s;
+                            svg {
+                                fill: $primary;
+                                transform:translateY(2px);
+                                margin-right:0.5em;
+                                transition: fill 0.3s;
+                            }
+                            &:hover {
+                                color: darken( $primary, 10% );
+                                svg { fill: darken( $primary, 10% );}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

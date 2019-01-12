@@ -18,6 +18,8 @@ a {
 
 .center {
   text-align: center; }
+  .center p {
+    margin: auto; }
 
 h1 {
   font-family: 'EksellMedium', serif;
@@ -54,19 +56,18 @@ p {
   margin-bottom: 1rem;
   font-size: 0.9rem;
   letter-spacing: 1px;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  width: 100%;
+  max-width: 700px; }
   p.caption {
     font-size: 0.7rem;
     color: #242424; }
 
-.justified-block {
-  width: 100%;
-  max-width: 600px; }
-  .justified-block p {
-    text-align: justify;
-    text-justify: inter-word; }
-    .justified-block p.center {
-      text-align: center; }
+.justified-block p {
+  text-align: justify;
+  text-justify: inter-word; }
+  .justified-block p.center {
+    text-align: center; }
 
 ul {
   font-family: Arial, sans-serif;
