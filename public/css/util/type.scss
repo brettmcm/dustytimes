@@ -11,6 +11,9 @@ a {
 
 .center {
     text-align:center;
+    p {
+        margin:auto;
+    }
 }
 
 h1 {
@@ -55,6 +58,8 @@ p {
     font-size:0.9rem;
     letter-spacing:1px;
     line-height:1.5rem;
+    width:100%;
+    max-width:700px;
     &.caption {
         font-size:0.7rem;
         color:lighten($foreground, 0.75);
@@ -62,8 +67,6 @@ p {
 }
 
 .justified-block {
-    width:100%;
-    max-width:600px;
     p {
         text-align: justify;
         text-justify: inter-word;
