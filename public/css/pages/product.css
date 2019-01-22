@@ -112,6 +112,21 @@ section#product .content {
     position: relative;
     width: 100%;
     margin-top: 1rem; }
+    section#product .content .product-buybox .shopify-embed {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2em 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd; }
+      section#product .content .product-buybox .shopify-embed .label {
+        margin-right: 1em;
+        font-size: 0.9em;
+        font-weight: bold;
+        color: #444; }
+      section#product .content .product-buybox .shopify-embed .buy-btn {
+        width: 100%; }
     section#product .content .product-buybox .content-breakdown {
       position: relative;
       margin-top: 3rem; }

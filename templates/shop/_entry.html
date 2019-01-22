@@ -23,7 +23,7 @@
                 <h4 class="color-primary">{{entry.announcement}}</h4>
             {% endif %}
 
-            <div id='product-component-8e2425f1a8b'></div>
+            <div class="shopify-embed"><span class="label">Quantity:</span> <div class="buy-btn" id='product-component-8e2425f1a8b'></div></div>
 
             {% if entry.contents is defined and entry.contents is not empty %}
                 <div class="content-breakdown">
@@ -87,13 +87,14 @@
         "variantId": "all",
         "width": "100%",
         "contents": {
+          "button": false,
           "img": false,
           "imgWithCarousel": false,
           "title": false,
           "variantTitle": false,
           "price": false,
           "description": false,
-          "buttonWithQuantity": false,
+          "buttonWithQuantity": true,
           "quantity": false
         },
         "text": {
@@ -124,7 +125,7 @@
       },
       "cart": {
         "contents": {
-          "button": true
+          "button": false
         },
         "styles": {
           "button": {
